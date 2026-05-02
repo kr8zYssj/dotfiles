@@ -1,0 +1,12 @@
+[Unit]
+Description=Reinit Cirrus audio after resume
+After=suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/audio-resume-fix
+
+[Install]
+WantedBy=suspend.target
+WantedBy=hibernate.target
+WantedBy=hybrid-sleep.target

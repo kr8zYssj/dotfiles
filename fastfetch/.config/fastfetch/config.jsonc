@@ -1,0 +1,40 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+    "logo": {
+        "type": "kitty", // Usa "kitty" si usas esa terminal, o "sixel" como alternativa
+      "source": "~/.config/fastfetch/ar8ch1024.png", // Asegúrate de que la ruta sea correcta
+      "width": 32,
+      "height": 16,
+      "padding": {
+          "top": 0
+      }
+  },
+
+  "display": {
+	  "color": {
+		  "keys": "red",
+		  "title": "red"
+	  },
+	  "size": {
+		  "binaryPrefix": "jedec"
+	  }
+
+  },
+  "modules": [
+    "break",
+    "break",
+    "break",
+    "break",
+    "os",
+    "shell",
+    "wm",
+    "terminal",
+    "cpu",
+    "memory",
+    {
+            "type": "command",
+            "key": "IDE",
+            "text": "echo $EDITOR"
+    }
+  ]
+}

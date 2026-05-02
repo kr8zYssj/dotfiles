@@ -1,0 +1,89 @@
+* {
+    font-family: "FontAwesome", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#power-profiles-daemon,
+#window,
+#workspaces {
+    padding: 0px 8px;
+    margin: 2px 2px;
+    background-color: rgba(142, 0, 0, 1);
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    background-color: #ffffff;
+    color: #8E0000;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f38ba8;
+    color: #11111b;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(2);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(142, 0, 0, 1);
+        color: #ffffff;
+    }
+}
+
+#power-profiles-daemon.power-saver {
+    background-color: #a6e3a1;
+    color: #11111b;
+}
+
+#network.disconnected {
+    background-color: #fab387;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
+tooltip {
+    background: rgba(30, 30, 46, 0.9);
+    border: 1px solid #8E0000;
+}
+tooltip label {
+    color: #ffffff;
+}
